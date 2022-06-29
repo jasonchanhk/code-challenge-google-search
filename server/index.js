@@ -1,5 +1,3 @@
-const express = require('express')
+const server = require('./server')
 
-const app = express()
-
-app.listen(3000, () => console.log("Server is listening to port 3000"))
+server.listen(3000, () => console.log("Server is listening to port 3000"))
