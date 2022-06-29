@@ -23,6 +23,7 @@ section {
   width: 90vw;
   max-width: 800px;
   padding: 0 0.5rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,17 +44,18 @@ form {
 }
 
 .search-input {
-  background-image: url(./assets/icon-search.svg);
+  background-image: url(./assets/search-icon-png.png);
   background-repeat: no-repeat;
-  background-position: 3% 50%;
+  /* background-position: ; */
+  background-size: 40px;
   box-shadow: 1px 1px 5px #999;
   padding: 0.5rem 1.75rem;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
   border-radius: 2rem;
   border: none;
   outline: none;
   width: 90%;
-  color: black;
+  color: #212121;
   font-size: 0.75rem;
   font-family: inherit;
   margin-bottom: 2rem;
@@ -66,7 +68,7 @@ form {
 
 .btn {
   border: none;
-  padding: 0.75rem 1.2rem;
+  padding: 0.5rem 1rem;
   background: #d3d3d3;
   text-transform: capitalize;
   font-family: inherit;
@@ -81,12 +83,23 @@ form {
   background: #d3d3d3;
 }
 
+.search-result-container {
+  margin-left: 3rem;
+}
+
 .search-results {
-  line-height: 1.5rem;
-  margin-top: 4rem;
+  line-height: 1.3rem;
+  margin-top: 2rem;
   width: 90%;
 }
 
 .text-results {
   font-size: 0.75rem;
+  color: #212121;
+}
+
+.first-tag {
+  display: block;
+  font-size: 0.7rem;
+  color: #212121;
 }
