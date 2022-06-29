@@ -1,34 +1,24 @@
 const form = document.querySelector('#google-search-form')
+const directBtn = document.querySelector('#directToRandomPage')
 
 function searchKeyword(e) {
     e.preventDefault()
-
     const keyword = e.target.keyword.value
     fetch(`http://localhost:3000/search/${keyword}`)
         .then(r => r.json())
         .then(appendResults)
-        .catch(console.warn)
+        .catch(err => console.error(err.message))
 }
 
-{/* <div class="search-results">
-    <a href="'https://en.wikipedia.org/wiki/Cat">Cat - Wikipedia</a>
-    <p class="text-results">
-        The cat (Felis catus) is a domestic species of small carnivorous
-        mammal. It is the only domesticated species in the family Felidae and
-        is often referred to as the domestic cat to distinguish it from the
-        wild members of the family.
-    </p>
-</div> */}
-
-function appendResults(data){
+function appendResults(data) {
     document.querySelector('.search-result-container').innerHTML = ""
     data.forEach(appendEachResult);
 }
 
-function appendEachResult(data){
+function appendEachResult(data) {
     const newDiv = document.createElement('div')
     newDiv.setAttribute('class', 'search-results')
-    
+
     const newATag = document.createElement('a')
     newATag.setAttribute('href', data.link)
     newATag.textContent = data.title
@@ -43,4 +33,19 @@ function appendEachResult(data){
     resultContainer.append(newDiv)
 }
 
+function directRandom() {
+    const keyword = document.querySelector('#keyword').value
+    fetch(`http://localhost:3000/search/${keyword}`)
+        .then(r => r.json())
+        .then(navigate)
+        .catch(err => console.error(err.message))
+}
+
+function navigate(data) {
+    const randomIndex = Math.floor(Math.random() * 9)
+    const selected = data[randomIndex]
+    window.location.href = `${selected.link}`
+}
+
 form.addEventListener('submit', searchKeyword)
+directBtn.addEventListener('click', directRandom)
