@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  margin-top: 6rem;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+}
+
+section {
+  width: 90vw;
+  max-width: 800px;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: 14rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+.search-input {
+  background-image: url(./assets/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: 3% 50%;
+  box-shadow: 1px 1px 5px #999;
+  padding: 0.5rem 1.75rem;
+  padding-left: 3rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  width: 90%;
+  color: black;
+  font-size: 0.75rem;
+  font-family: inherit;
+  margin-bottom: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  padding: 0.75rem 1.2rem;
+  background: #d3d3d3;
+  text-transform: capitalize;
+  font-family: inherit;
+  cursor: pointer;
+  display: block;
+  margin-right: 0.75rem;
+}
+
+.btn-lucky {
+  color: black;
+  font-size: 0.85rem;
+  background: #d3d3d3;
+}
+
+.search-results {
+  line-height: 1.5rem;
+  margin-top: 4rem;
+  width: 90%;
+}
+
+.text-results {
+  font-size: 0.75rem;
+}
