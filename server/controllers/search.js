@@ -4,7 +4,7 @@ const router = express.Router();
 const Result = require('../models/search')
 
 router.get('/', (req, res) => {
-    res.status(405).json({ message: 'Please type in your search keyword' })
+    res.status(405)
 })
 
 router.get('/:keyword', (req, res) => {
@@ -12,7 +12,7 @@ router.get('/:keyword', (req, res) => {
         const selectedData = Result.findByKeyword(req.params.keyword)
         res.send(selectedData)
     }catch(err){
-        res.status(404).json({ message: `${err.message}` })
+        res.status(404)
     }
 })
 
