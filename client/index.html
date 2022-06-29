@@ -9,18 +9,37 @@
     <title>Google Homepage</title>
   </head>
   <body>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Gmail</a></li>
+        <li><a href="#home" class="nav-link img-link">Images</a></li>
+        <li>
+          <img src="./assets/dotted-icon.png" class="dotted" class="nav-link" />
+        </li>
+        <li><div class="nav-link avatar">U</div></li>
+      </ul>
+    </nav>
+
     <section>
       <img src="./assets/google-logo-png.png" alt="google logo" class="logo" />
       <form id="google-search-form">
-        <input
-          type="text"
-          placeholder="Search Google or type a URL"
-          class="search-input"
-          id="keyword"
-        />
+        <div class="input-container">
+          <input
+            type="text"
+            placeholder="Search Google or type a URL"
+            class="search-input"
+            id="keyword"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzy6pYxw5yrYumdyaBtBjVyeKgLgPFYAsh4A&usqp=CAU"
+            class="voice-over"
+          />
+        </div>
         <div class="btn-container">
           <button type="submit" class="btn">google search</button>
-          <button type="button" class="btn btn-lucky" id="directToRandomPage">I'm feeling lucky</button>
+          <button type="button" class="btn" id="directToRandomPage">
+            I'm feeling lucky
+          </button>
         </div>
       </form>
       <div class="search-result-container"></div>
