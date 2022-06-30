@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* Looks very clean! */
+
 * {
   padding: 0;
   margin: 0;
@@ -29,6 +31,7 @@ body {
   display: block;
   padding: 0.2rem 0.3rem;
   text-transform: capitalize;
+  /* This color isn't needed :O */
   color: #212121;
   cursor: pointer;
   font-size: 0.7rem;
@@ -93,9 +96,10 @@ form {
   border: none;
   outline: none;
   width: 100%;
+  /* This color isn't needed :O */
   color: #212121;
   font-size: 0.75rem;
-  font-family: inherit;
+  font-family: inherit; 
   margin-bottom: 2rem;
 }
 

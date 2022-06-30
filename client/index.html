@@ -1,53 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <script defer src="./scripts.js"></script>
-    <title>Google Homepage</title>
-  </head>
-  <body>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link">gmail</a></li>
-        <li><a href="#home" class="nav-link img-link">images</a></li>
-        <li>
-          <img src="./assets/dotted-icon.png" class="dotted" class="nav-link" />
-        </li>
-        <li><div class="nav-link avatar">U</div></li>
-      </ul>
-    </nav>
-    <section>
-      <img src="./assets/google-logo-png.png" alt="google logo" class="logo" />
-      <form id="google-search-form">
-        <div class="input-container">
-          <img
-            src="https://www.citypng.com/public/uploads/small/11640084021s7j4kii6hsgshmcxlovq7siag8vktv9rhqscjbbuyse2favmnjhrpjhrgqcug2nqdcpxsmovtjjonzon74knmk3kywi3tpxrpg8r.png"
-            alt="search icon"
-            class="search-icon"
-          />
-          <input
-            type="text"
-            placeholder="Search Google or type a URL"
-            class="search-input"
-            id="keyword"
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzy6pYxw5yrYumdyaBtBjVyeKgLgPFYAsh4A&usqp=CAU"
-            alt="voice-over icon"
-            class="voice-over-icon"
-          />
-        </div>
-        <div class="btn-container">
-          <button type="submit" class="btn">google search</button>
-          <button type="button" class="btn" id="directToRandomPage">
-            I'm feeling lucky
-          </button>
-        </div>
-      </form>
-      <div class="search-result-container"></div>
-    </section>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+  <script defer src="./scripts.js"></script>
+  <title>Google Homepage</title>
+</head>
+
+<body>
+  <nav>
+    <!-- For the nav links next time try to link them to real pages! -->
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">gmail</a></li>
+      <li><a href="#home" class="nav-link img-link">images</a></li>
+      <li>
+        <img src="./assets/dotted-icon.png" class="dotted" class="nav-link" />
+      </li>
+      <li>
+        <div class="nav-link avatar">U</div>
+      </li>
+    </ul>
+  </nav>
+  <section>
+    <img src="./assets/google-logo-png.png" alt="google logo" class="logo" />
+    <!-- This is good! -->
+    <form id="google-search-form">
+      <div class="input-container">
+        <img
+          src="https://www.citypng.com/public/uploads/small/11640084021s7j4kii6hsgshmcxlovq7siag8vktv9rhqscjbbuyse2favmnjhrpjhrgqcug2nqdcpxsmovtjjonzon74knmk3kywi3tpxrpg8r.png"
+          alt="search icon" class="search-icon" />
+        <input type="text" placeholder="Search Google or type a URL" class="search-input" id="keyword" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzy6pYxw5yrYumdyaBtBjVyeKgLgPFYAsh4A&usqp=CAU"
+          alt="voice-over icon" class="voice-over-icon" />
+      </div>
+      <div class="btn-container">
+        <button type="submit" class="btn">google search</button>
+        <button type="button" class="btn" id="directToRandomPage">
+          I'm feeling lucky
+        </button>
+      </div>
+    </form>
+    <div class="search-result-container"></div>
+  </section>
+</body>
+
 </html>
