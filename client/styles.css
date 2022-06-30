@@ -10,10 +10,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-}
-
 body {
   background-color: #fff;
   font-family: "Roboto", sans-serif;
@@ -26,6 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  list-style: none;
 }
 
 .nav-link {
@@ -89,11 +86,6 @@ form {
 }
 
 .search-input {
-  background-image: url(./assets/search-icon-png.png);
-  background-repeat: no-repeat;
-  background-position: 1%;
-  background-size: 40px;
-  background-color: transparent;
   box-shadow: 1px 1px 5px #999;
   padding: 0.7rem 1.75rem;
   padding-left: 2.5rem;
@@ -111,11 +103,20 @@ form {
   outline: none;
 }
 
-.voice-over {
+.search-icon,
+.voice-over-icon {
   width: 0.9rem;
   position: absolute;
-  bottom: 52%;
   transform: translateY(-50%);
+}
+
+.search-icon {
+  bottom: 51%;
+  left: 1rem;
+}
+
+.voice-over-icon {
+  bottom: 52%;
   right: 1rem;
 }
 
@@ -157,4 +158,9 @@ form {
   display: block;
   font-size: 0.7rem;
   color: #212121;
+}
+
+.first-tag:hover {
+  color: #0000ff;
+  text-decoration: underline;
 }
