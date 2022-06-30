@@ -99,10 +99,6 @@ form {
   margin-bottom: 2rem;
 }
 
-.search-input:hover {
-  outline: none;
-}
-
 .search-icon,
 .voice-over-icon {
   width: 0.9rem;
