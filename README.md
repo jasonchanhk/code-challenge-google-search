@@ -42,3 +42,17 @@
 * Retrieve error message from api endpoint
 * Put two icon in the search input field
 * Place list items in navbar on the right hand side
+
+## Key takeaway
+
+### Server
+
+* Use `express.static()` to render local file
+* Extract req.query and put into `URLSearchParams` for restructuring
+* Use `res.sendFile(path.resolve('./index.html'))` if you want to improve URL
+
+### Client
+
+* Could trigger two different submit action depending on `e.submitter.id`
+* `window.location.origin` is the base URL (e.g.`http://localhost:3000`)
+* Access URL query without request by `(new URL(document.location)).searchParams`

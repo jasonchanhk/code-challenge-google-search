@@ -1,26 +1,7 @@
-const form = document.querySelector("#google-search-form");
-const directBtn = document.querySelector('#directToRandomPage')
-
-function handleError(response) {
-    if (!response.ok) {
-        throw Error(response.status);
-    } else {
-        return response.json();
-    }
-}
-
-function createAlert(err) {
-    if (err.message == 404) {
-        alert('Our google does not support this keyword')
-    } else if (err.message == 405) {
-        alert('Please type in your search keyword')
-    }
-}
-
-function searchKeyword(e) {
-    e.preventDefault();
-
-    const keyword = e.target.keyword.value;
+function fetchResultData(){
+    const params = (new URL(document.location)).searchParams
+    const keyword = params.get('keyword')
+    console.log(keyword)
     fetch(`http://localhost:3000/search/${keyword}`)
         .then(handleError)
         .then(appendResults)
@@ -61,20 +42,4 @@ function appendEachResult(data) {
     resultContainer.append(newDiv);
 }
 
-
-function directRandom() {
-    const keyword = document.querySelector('#keyword').value
-    fetch(`http://localhost:3000/search/${keyword}`)
-        .then(handleError)
-        .then(navigate)
-        .catch(createAlert)
-}
-
-function navigate(data) {
-    const randomIndex = Math.floor(Math.random() * 9)
-    const selected = data[randomIndex]
-    window.location.href = `${selected.link}`
-}
-
-form.addEventListener('submit', searchKeyword)
-directBtn.addEventListener('click', directRandom)
+fetchResultData()
